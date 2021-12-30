@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #191919;
+}
+
+h3 {
+  color: #db6b97;
+  font-weight: bold;
+  text-align: center;
+  margin: 5%;
+  margin-bottom: 10%;
+  font-size: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator__container {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  margin: auto;
+  box-shadow: 0 0 10px #ff87ca;
+}
+
+.display {
+  height: 100px;
+  width: 100%;
+  text-align: right;
+  padding: 20px;
+  font-size: 30px;
+  position: relative;
+  background-color: #c996cc;
+}
+.calculator__header {
+  opacity: 0.4;
+  font-size: 20px;
+  overflow: hidden;
+   height: 20px; 
+   margin-bottom:5px;
+}
+
+/* .temp-result {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+  font-size: 20px;
+  opacity: 0.3;
+} */
+
+.calculator__body {
+  color: whitesmoke;
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+}
+
+.calculator__result {
+  background-color: #a371a6;
+  color: white;
+  height: 30px; 
+}
+
+button {
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ff87ca;
+  text-shadow: 0 0 30px #fff;
+  background-color: black;
+  border: 1px solid;
+  box-shadow: 0 0 10px #ff87ca;
+}
+
+.numbersButtons {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+}
+
+.deleteButtons {
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+}
+
+.box-buttons {
+  grid-area: first;
+}
+
+.--fn {
+  grid-area: second;
+}
+
+.deleteButtons {
+  grid-area: third;
+}
+
+.calculator__body {
+  display: grid;
+  grid-template-areas:
+    "third third third third"
+    "first second second second ";
+}
+
+.--fn:last-child {
+  border-radius: 0 0 15px 0;
+}
+
+.--border {
+  border-radius: 0 0 0 15px;
+}
+
+.calculator__body button:hover {
+  box-shadow: 0 4px 16px black;
+  border: none;
+}
