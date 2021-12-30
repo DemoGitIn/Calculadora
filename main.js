@@ -17,6 +17,8 @@ const handlerClickNumber = (e) => {
         haveDot = true;
     } else if (e.target.innerText === "." && haveDot) {
         return;
+    } else if (isNaN(e.target.innerText)) {
+        return
     }
     num2 += e.target.innerText;
     display2.innerText = num2;
