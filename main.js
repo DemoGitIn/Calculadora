@@ -77,7 +77,6 @@ const handlerEqual = (e) => {
     num2 = result;
     num1 = "";
     if (document.activeElement && document.activeElement.matches('button')) {
-        console.log('propagation stopped');
         e.stopPropagation();
     }
 };
